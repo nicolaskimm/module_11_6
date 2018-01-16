@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Caveat:400,700");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #eaead3;
+  font-family: "Caveat"; }
+
+.board {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/131683/pexels-photo-131683.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  background-size: cover; }
+  .board .create-column, .board .column-container .column button {
+    background-color: rgba(255, 105, 97, 0.8);
+    border: 2px solid #eaead3;
+    color: #eaead3;
+    width: 20%;
+    height: 30px;
+    margin-bottom: 10px; }
+    .board .create-column:hover, .board .column-container .column button:hover {
+      transform: scale(1.3);
+      z-index: 1; }
+  .board h1 {
+    width: 60%;
+    font-size: 55px;
+    background: -webkit-linear-gradient(#ff6961, #eaead3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center; }
+  .board .column-container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .board .column-container .column {
+      height: 100%;
+      background-color: rgba(98, 102, 109, 0.2);
+      margin: 10px; }
+      .board .column-container .column .column-card-list {
+        height: 100vh;
+        width: 100%; }
+      .board .column-container .column .column-title {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-align: center; }
+      .board .column-container .column button {
+        height: auto;
+        width: auto; }
+      .board .column-container .column .btn-delete {
+        margin-right: 10px; }
+      .board .column-container .column ul {
+        list-style-type: none;
+        padding: 0; }
+        .board .column-container .column ul li:hover {
+          background-color: rgba(98, 102, 109, 0.5); }
+        .board .column-container .column ul .card {
+          display: flex;
+          flex-direction: row;
+          font-size: 22px;
+          color: linear-gradient to right, #FF0000, #E2571E, #FF7F00, #FFFF00, #00FF00, #96bf33, #0000FF, #4B0082, #8B00FF; }
+          .board .column-container .column ul .card button {
+            height: 20px;
+            width: 20px;
+            background-color: #5f6172;
+            color: #eaead3;
+            border: 2px solid; }
+
+/*# sourceMappingURL=style.css.map */
