@@ -30,6 +30,19 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center; }
+  .board .change-color {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial';
+    font-size: 17px;
+    margin: 10px 0; }
+    .board .change-color p, .board .change-color input {
+      margin: 0 5px; }
+    .board .change-color input {
+      background-color: rgba(255, 105, 97, 0.8);
+      border-radius: 8px; }
   .board .column-container {
     width: 90%;
     display: flex;

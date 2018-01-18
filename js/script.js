@@ -143,4 +143,12 @@ $(function() {
         columns.width(width);     
     }
     
+    var colorButton = $('input');
+    var cards = $('.card-description');
+        
+    colorButton.change(function(){
+        cards.css('color', colorButton.val());
+    })
+    
+    
 })
