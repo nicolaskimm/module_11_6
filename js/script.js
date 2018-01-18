@@ -1,5 +1,6 @@
 $(function() {
     
+    
     function randomString() {
         var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
         var str = '';
@@ -20,7 +21,7 @@ $(function() {
             var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
             var $columnDelete = $('<button>').addClass('btn-delete').text('x');
             var $columnCardList = $('<ul>').addClass('column-card-list');
-            var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
+            var $columnAddCard = $('<button>').addClass('add-card').text('Add task');
             
             $columnDelete.click(function() {
                 self.removeColumn();
@@ -28,7 +29,15 @@ $(function() {
                 calcWidth();
             });
             $columnAddCard.click(function() {
-                self.addCard(new Card(prompt("Enter the name of the card")));
+                var cardName = prompt('Great! Another task..');
+                
+                if (cardName == ''){
+                    alert('Oops, you didn\'t type anything. Try again.');
+                } else { 
+                self.addCard(new Card(cardName));
+                }
+        
+                calcWidth();
             });
             
             $column.append($columnTitle)
@@ -94,12 +103,19 @@ $(function() {
     
     $('.create-column')
         .click(function(){
-        var name = prompt('Enter a column name');
-        var column = new Column(name);
-    	   board.addColumn(column);
+        var columnName = prompt('Enter a column name');
         
-        calcWidth();
+        if (columnName == ''){
+            alert('Oops, you didn\'t named your column.');
+        } else {
+            var column = new Column(columnName);
+    	    board.addColumn(column);
+        
+            calcWidth();
+        }
+          
     });
+    
     
     // CREATING COLUMNS
     var todoColumn = new Column('To do');
