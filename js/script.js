@@ -34,7 +34,7 @@ $(function() {
                 if (cardName == ''){
                     alert('Oops, you didn\'t type anything. Try again.');
                 } else { 
-                self.addCard(new Card(cardName));
+                    self.addCard(new Card(cardName));
                 }
         
                 calcWidth();
@@ -109,7 +109,7 @@ $(function() {
             alert('Oops, you didn\'t named your column.');
         } else {
             var column = new Column(columnName);
-    	    board.addColumn(column);
+            board.addColumn(column);
         
             calcWidth();
         }
